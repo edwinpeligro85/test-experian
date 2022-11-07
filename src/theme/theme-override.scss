@@ -4,6 +4,8 @@
 $font-sizes: (
   14: 0.875rem,
   18: 1.125rem,
+  20: 1.25rem,
+  21: 1.313rem,
 );
 
 $position-values: (
@@ -44,6 +46,17 @@ $utilities: map-merge(
           $theme-colors,
           (
             "gray-300": $gray-300,
+          )
+        ),
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "gray": $gray-400,
           )
         ),
     ),

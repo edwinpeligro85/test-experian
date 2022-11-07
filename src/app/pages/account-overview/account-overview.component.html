@@ -1,0 +1,161 @@
+<div class="container pb-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card p-3">
+        <h1 class="fs-21 m-0" translate>Account overview</h1>
+      </div>
+    </div>
+
+    <div class="col-12 mt-2">
+      <div class="card p-3">
+        <p class="fs-20 text-purple" translate>General information</p>
+
+        <form>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 px-0">
+                <label for="name">Nombres</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Carlos" />
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="lastName">Apellidos</label>
+                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Monsalve" />
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="dniType">Documento de identidad</label>
+                <select class="form-control" name="dniType" id="dniType">
+                  <option>Cédula de ciudadanía</option>
+                </select>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="dni">Número de documento de identidad</label>
+                <input type="number" class="form-control" name="dni" id="dni" placeholder="100000000" />
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" />
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="phone">Celular</label>
+                <div class="input-group">
+                  <div ngbDropdown class="d-inline-block intl me-2">
+                    <button type="button" class="btn px-2" id="dropdownIntl" ngbDropdownToggle>
+                      <img src="https://wise.com/public-resources/assets/flags/rectangle/cop.png" alt="" /> + 57
+                      <em class="fas fa-chevron-down fa-xs"></em>
+                    </button>
+
+                    <div ngbDropdownMenu aria-labelledby="dropdownIntl">
+                      <button ngbDropdownItem>
+                        <img src="https://wise.com/public-resources/assets/flags/rectangle/cop.png" alt="" /> + 57
+                      </button>
+                    </div>
+                  </div>
+
+                  <input type="tel" class="form-control" id="phone" />
+                </div>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="birthDate">Fecha de nacimiento</label>
+                <input type="date" class="form-control" name="birthDate" id="birthDate" />
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label>Genero</label>
+                <div class="d-flex justify-content-between">
+                  <div class="form-group w-50 pe-2">
+                    <input type="radio" class="btn-check" id="genre1" name="genre" autocomplete="off" />
+                    <label class="btn btn-outline-primary border border-gray w-100" for="genre1">Hombre</label>
+                  </div>
+
+                  <div class="form-group w-50 ps-2">
+                    <input type="radio" class="btn-check" id="genre2" name="genre" autocomplete="off" />
+                    <label class="btn btn-outline-primary border border-gray w-100" for="genre2">Mujer</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 px-0 mt-3 d-grid">
+                <button class="btn btn-primary">Editar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-12 mt-2">
+      <div class="card p-3">
+        <p class="fs-20 text-purple" translate>Información financiera</p>
+
+        <form>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 px-0">
+                <label for="job">Ocupación</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="job" id="job1" value="estudiante" />
+                  <label class="form-check-label" for="job1"> Estudiante </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="job" id="job2" value="empleado" />
+                  <label class="form-check-label" for="job2"> Empleado </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="job" id="job3" value="independiente" />
+                  <label class="form-check-label" for="job3"> Independiente </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="job" id="job4" value="pensionado" />
+                  <label class="form-check-label" for="job4"> Pensionado </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="job" id="job5" value="otro" />
+                  <label class="form-check-label" for="job5"> Otro </label>
+                </div>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="educationLevel">Nivel de educación</label>
+                <select class="form-select" name="educationLevel" id="educationLevel">
+                  <option>Postgrado</option>
+                </select>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="workActivity">Actividad laboral</label>
+                <select class="form-select" name="workActivity" id="workActivity">
+                  <option>Tecnología</option>
+                </select>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="income">Ingresos promedio mensuales</label>
+                <select class="form-select" name="income" id="income">
+                  <option>Entre 2'000.001 y 3'000.000</option>
+                </select>
+              </div>
+
+              <div class="col-12 px-0 mt-3">
+                <label for="expenses">Gastos promedio mensuales</label>
+                <select class="form-select" name="expenses" id="expenses">
+                  <option>Entre 1'500.000 y 2'000.000</option>
+                </select>
+              </div>
+
+              <div class="col-12 px-0 mt-3 d-grid">
+                <button class="btn btn-primary">Editar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
