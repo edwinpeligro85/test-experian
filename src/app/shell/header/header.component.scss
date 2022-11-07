@@ -1,0 +1,30 @@
+@import "src/theme/theme-variables";
+
+.navbar {
+  margin-bottom: $spacer;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+.nav-item {
+  color: $black;
+  font-size: 11px;
+  font-weight: 400;
+  text-decoration: none;
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    padding: 0.7rem;
+    background-color: $gray-300;
+  }
+
+  &.active .icon {
+    background-color: $purple;
+  }
+  &.disabled {
+    opacity: 0.5;
+  }
+}

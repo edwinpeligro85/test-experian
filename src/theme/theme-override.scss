@@ -1,0 +1,60 @@
+// Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
+// in components.
+
+$font-sizes: (
+  14: 0.875rem,
+  18: 1.125rem,
+);
+
+$position-values: (
+  10: 10%,
+  50: 50%,
+  80: 80%,
+  100: 100%,
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+    ),
+    "color": (
+      property: color,
+      class: text,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "black": $black,
+            "purple": $purple,
+            "gray-300": $gray-300,
+            "gray-900": $gray-900,
+          )
+        ),
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "gray-300": $gray-300,
+          )
+        ),
+    ),
+    "top": (
+      property: top,
+      values: $position-values,
+    ),
+    "start": (
+      property: left,
+      class: start,
+      values: $position-values,
+    ),
+  )
+);

@@ -1,0 +1,57 @@
+/*
+ * Application global variables.
+ */
+
+// Set Font Awesome font path
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+// ---------------------------------------------------------------------------
+// Bootstrap variables
+//
+// Override Bootstrap variables here to suite your theme.
+// Copy variables you want to customize from node_modules/bootstrap/scss/_variables.scss
+
+//
+// Color system
+//
+
+$white: #ffffff;
+$gray-100: #f1f1f7;
+$gray-200: #d8d8d8;
+$gray-300: #e4e0e8;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #474749;
+$black: #000000;
+
+$blue: #4e1375;
+$indigo: #6610f2;
+$purple: #632678;
+$pink: #e83e8c;
+$red: #bc1656;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$theme-colors: (
+  info: $cyan,
+  dark: $gray-800,
+  light: $gray-100,
+  danger: $red,
+  primary: $blue,
+  success: $green,
+  warning: $yellow,
+  secondary: $gray-600,
+);
+
+// Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
+// in components.
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/utilities";

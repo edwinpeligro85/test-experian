@@ -1,0 +1,22 @@
+{
+  "APP_NAME": "experian",
+  "About": "Acerca de",
+  "Hello world !": "¡Hola Mundo!",
+  "Home": "Inicio",
+  "Logged in as": "Conectado como",
+  "Login": "Iniciar sesión",
+  "Logout": "Salir",
+  "Password": "Contraseña",
+  "Password is required": "Se requiere contraseña",
+  "Username": "Nombre de usuario",
+  "Username is required": "Se requiere nombre de usuario",
+  "Username or password incorrect.": "Usuario o contraseña incorrectos.",
+  "Remember me": "Recuérdame",
+  "Version": "Versión",
+  "Hello": "Hola",
+  "Profile": "Perfil",
+  "Account overview": "Vista general de la cuenta",
+  "Edit profile": "Editar perfil",
+  "Change password": "Cambio de contraseña",
+  "Notification settings": "Configuración de notificaciones"
+}

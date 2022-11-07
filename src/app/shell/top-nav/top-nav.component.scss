@@ -1,0 +1,15 @@
+@import "~src/theme/theme-variables.scss";
+
+nav {
+  height: 80px;
+}
+
+.btn-profile {
+  background-color: $purple;
+  border-radius: 8px;
+  width: 104px;
+  height: 26px;
+  font-size: 14px;
+  color: #fff;
+  padding: 4px 20px;
+}
