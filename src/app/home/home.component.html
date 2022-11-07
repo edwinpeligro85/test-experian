@@ -1,20 +1,50 @@
-<!-- <div class="container-fluid">
-  <div class="jumbotron text-center">
-    <h1>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
-      <span translate>Hello world !</span>
-    </h1>
-    <app-loader [isLoading]="isLoading"></app-loader>
-    <q [hidden]="isLoading">{{ quote }}</q>
-    <p>
-      <button
-        class="btn btn-primary"
-        angulartics2On="click"
-        angularticsAction="Click button below quote"
-        angularticsCategory="test"
-      >
-        Click me to send an Analytics event
-      </button>
-    </p>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4">
+      <div class="container-fluid card p-4">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row">
+          <div class="col-12">
+            <label for="user">Usuario</label>
+            <select class="form-select" formControlName="userId" id="user">
+              <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="title">Titulo</label>
+            <input type="text" class="form-control" formControlName="title" id="title" />
+          </div>
+
+          <div class="col-12">
+            <label for="body">Cuerpo</label>
+            <textarea class="form-control" formControlName="body" id="body" rows="3"></textarea>
+          </div>
+
+          <div class="col-12 px-0 mt-3 d-grid">
+            <button [disabled]="isLoading && form.valid" type="submit" class="btn btn-primary">Crear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 min-vh-80">
+      <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div *ngIf="!isLoading" class="row row-cols-1 row-cols-md-2 g-4">
+        <div *ngFor="let post of posts" class="col">
+          <div class="card h-100">
+            <img src="https://picsum.photos/200/200" class="card-img-top" [alt]="post.title" />
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div> -->
+</div>
