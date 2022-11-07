@@ -1,7 +1,6 @@
-# experian
+# Experian test
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 11.0.0
+This project is a technical test for Experian. For live test navigate to `https://edwinpeligro85.github.io/test-experian/`.
 
 # Getting started
 
@@ -17,128 +16,76 @@ npm install
 npm start
 ```
 
-# Project structure
+# Main routes
+
+Locations of the requested points in the test.
+
+| Task                | Description                           |
+| ------------------- | ------------------------------------- |
+| `/account-overview` | Template requested in the first poin` |
+| `/account-overview` | Post module                           |
+
+# Solution to problem #1
 
 ```
-dist/                        web app production build
-docs/                        project docs and coding guides
-cypress/                     end-to-end tests (Cypress)
-src/                         project source code
-|- app/                      app components
-|  |- core/                  core module (singleton services and single-use components)
-|  |- shared/                shared module  (common components, directives and pipes)
-|  |- app.component.*        app root component (shell)
-|  |- app.module.ts          app root module definition
-|  |- app-routing.module.ts  app routes
-|  +- ...                    additional modules and components
-|- assets/                   app assets (images, fonts, sounds...)
-|- environments/             values for various build environments
-|- theme/                    app global scss variables and theme
-|- translations/             translations files
-|- index.html                html entry point
-|- main.scss                 global style entry point
-|- main.ts                   app entry point
-|- polyfills.ts              polyfills needed by Angular
-+- test.ts                   unit tests entry point
-reports/                     test and coverage reports
-proxy.conf.js                backend proxy configuration
+console.log(divisors(12));
+console.log(divisors(25));
+console.log(divisors(13));
+
+function divisors(num) {
+  let divisors = [];
+
+  for (var i = 2; i < num; i++) {
+    if (!prime(num, i)) {
+      divisors.push(i);
+    }
+  }
+
+  return divisors.length > 0 ? divisors : num + ' es primo';
+}
+
+function prime(num, divisor) {
+  if (num % divisor === 0) return false;
+
+  return num !== 1;
+}
 ```
 
-# Main tasks
+# Solution to problem #2
 
-Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
+```
+const recipe = { flour: 500, sugar: 200, eggs: 1 };
+const available = { flour: 1200, sugar: 1200, eggs: 5, milk: 200 };
+console.log(cakes(recipe, available));
 
-| Task                                            | Description                                                                                                      |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `npm start`                                     | Run development server on `http://localhost:4200/`                                                               |
-| `npm run serve:sw`                              | Run test server on `http://localhost:4200/` with service worker enabled                                          |
-| `npm run build [-- --configuration=production]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder |
-| `npm test`                                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode                                         |
-| `npm run test:ci`                               | Lint code and run unit tests once for continuous integration                                                     |
-| `npm run e2e`                                   | Run e2e tests using [Cypress](https://www.cypress.io/)                                                           |
-| `npm run lint`                                  | Lint code                                                                                                        |
-| `npm run translations:extract`                  | Extract strings from code and templates to `src/app/translations/template.json`                                  |
-| `npm run compodoc`                              | Generates and display generates documentation from code                                                          |
-| `npm run prettier`                              | Automatically format all `.ts`, `.js` & `.scss` files                                                            |
+console.log('================================');
 
-When building the application, you can specify the target configuration using the additional flag
-`--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).
+const recipe2 = { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 };
+const available2 = { sugar: 500, flour: 2000, milk: 2000 };
+console.log(cakes(recipe2, available2));
 
-The default build configuration is `prod`.
+function cakes(recipe, available) {
+  let hasAviables = true;
+  let numberPreparedRecipes = 0;
 
-## Development server
+  while (hasAviables) {
+    let numberIngredientsUsed = 0;
+    for (const key in recipe) {
+      const ingredient = recipe[key];
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change
-any of the source files.
-You should not use `ng serve` directly, as it does not use the backend proxy configuration by default.
+      if (available[key] && available[key] >= ingredient) {
+        available[key] -= ingredient;
+        numberIngredientsUsed += 1;
+      } else {
+        hasAviables = false;
+      }
 
-## Code scaffolding
+      if (Object.keys(recipe).length == numberIngredientsUsed) {
+        numberPreparedRecipes += 1;
+      }
+    }
+  }
 
-Run `npm run generate -- component <name>` to generate a new component. You can also use
-`npm run generate -- directive|pipe|service|class|module`.
-
-If you have installed [angular-cli](https://github.com/angular/angular-cli) globally with `npm install -g @angular/cli`,
-you can also use the command `ng generate` directly.
-
-## Additional tools
-
-Tasks are mostly based on the `angular-cli` tool. Use `ng help` to get more help or go check out the
-[Angular-CLI README](https://github.com/angular/angular-cli).
-
-## Code formatting
-
-All `.ts`, `.js` & `.scss` files in this project are formatted automatically using [Prettier](https://prettier.io),
-and enforced via the `test:ci` script.
-
-A pre-commit git hook has been configured on this project to automatically format staged files, using
-(pretty-quick)[https://github.com/azz/pretty-quick], so you don't have to care for it.
-
-You can also force code formatting by running the command `npm run prettier`.
-
-# What's in the box
-
-The app template is based on [HTML5](http://whatwg.org/html), [TypeScript](http://www.typescriptlang.org) and
-[Sass](http://sass-lang.com). The translation files use the common [JSON](http://www.json.org) format.
-
-#### Tools
-
-Development, build and quality processes are based on [angular-cli](https://github.com/angular/angular-cli) and
-[NPM scripts](https://docs.npmjs.com/misc/scripts), which includes:
-
-- Optimized build and bundling process with [Webpack](https://webpack.github.io)
-- [Development server](https://webpack.github.io/docs/webpack-dev-server.html) with backend proxy and live reload
-- Cross-browser CSS with [autoprefixer](https://github.com/postcss/autoprefixer) and
-  [browserslist](https://github.com/ai/browserslist)
-- Asset revisioning for [better cache management](https://webpack.github.io/docs/long-term-caching.html)
-- Unit tests using [Jasmine](http://jasmine.github.io) and [Karma](https://karma-runner.github.io)
-- End-to-end tests using [Cypress](https://www.cypress.io/)
-- Static code analysis: [TSLint](https://github.com/palantir/tslint), [Codelyzer](https://github.com/mgechev/codelyzer),
-  [Stylelint](http://stylelint.io) and [HTMLHint](http://htmlhint.com/)
-- Automatic Angular documentation generation using [Compodoc](https://compodoc.app)
-- Automatic code formatting with [Prettier](https://prettier.io)
-
-#### Libraries
-
-- [Angular](https://angular.io)
-- [Bootstrap 4](https://getbootstrap.com)
-- [ng-bootsrap](https://ng-bootstrap.github.io/)
-- [Font Awesome](http://fontawesome.io)
-- [RxJS](http://reactivex.io/rxjs)
-- [ngx-translate](https://github.com/ngx-translate/core)
-
-#### Coding guides
-
-- [Angular](docs/coding-guides/angular.md)
-- [TypeScript](docs/coding-guides/typescript.md)
-- [Sass](docs/coding-guides/sass.md)
-- [HTML](docs/coding-guides/html.md)
-- [Unit tests](docs/coding-guides/unit-tests.md)
-- [End-to-end tests](docs/coding-guides/e2e-tests.md)
-
-#### Other documentation
-
-- [I18n guide](docs/i18n.md)
-- [Working behind a corporate proxy](docs/corporate-proxy.md)
-- [Updating dependencies and tools](docs/updating.md)
-- [Using a backend proxy for development](docs/backend-proxy.md)
-- [Browser routing](docs/routing.md)
+  return numberPreparedRecipes;
+}
+```
