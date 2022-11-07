@@ -23,7 +23,7 @@ Locations of the requested points in the test.
 | Task                | Description                           |
 | ------------------- | ------------------------------------- |
 | `/account-overview` | Template requested in the first poin` |
-| `/account-overview` | Post module                           |
+| `/home` | Post module                           |
 
 # Solution to problem #1
 
