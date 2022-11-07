@@ -1,0 +1,101 @@
+{
+  "configVersion": 1,
+  "timestamp": 1667805912154,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/10.d454f41cda791b6e.js",
+        "/735.c29439d379f27d21.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.f20bbeafdc906eb8.js",
+        "/manifest.webmanifest",
+        "/polyfills.466485aa1a319029.js",
+        "/runtime.5628113bba570ac6.js",
+        "/styles.cbbebdc506354f1a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/apple-touch-icon.png",
+        "/assets/icons/calendar.svg",
+        "/assets/icons/info.svg",
+        "/assets/icons/lock_dark.svg",
+        "/assets/icons/pen_dark.svg",
+        "/assets/icons/tone_dark.svg",
+        "/assets/icons/user_light.svg",
+        "/assets/ngx-rocket-logo.png",
+        "/assets/ngx-rocket-logo@192.png",
+        "/calendar.048ac0db24a7e53b.svg",
+        "/fa-brands-400.87a84e7a754d3ea3.woff2",
+        "/fa-brands-400.8f295425e00606a5.ttf",
+        "/fa-regular-400.561c7c94e0bcd512.woff2",
+        "/fa-regular-400.e9092185220128b0.ttf",
+        "/fa-solid-900.3cfeed05c6462b50.woff2",
+        "/fa-solid-900.ab3a31afd1611597.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/10.d454f41cda791b6e.js": "9327ca4fa1061be36b982a8f825a2c013a34425c",
+    "/735.c29439d379f27d21.js": "428d9a82e356f20b4891c39d9dc1856386f2c8e8",
+    "/apple-touch-icon.png": "229df2094cc590088de00ea97a1eb4e4493101d2",
+    "/assets/icons/calendar.svg": "d7ebf8ef380be3872fdad9ebf853201fe536c012",
+    "/assets/icons/info.svg": "47b0b8f66efeb341721976d397a51780cd123d7c",
+    "/assets/icons/lock_dark.svg": "5f492023c4e3085900e54c849b293f5ba76c74c4",
+    "/assets/icons/pen_dark.svg": "c5ee1fffad1ac3b0bc04558e1ad5d0cecf8c9a6b",
+    "/assets/icons/tone_dark.svg": "e6d7b789915fa7b6b094eed8de8c50146b721a09",
+    "/assets/icons/user_light.svg": "5c41163dc6727b800f4029aa6638ca5ff9a13b20",
+    "/assets/ngx-rocket-logo.png": "0ac53fd27406fe5a36e68285315fb0012e54058e",
+    "/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
+    "/calendar.048ac0db24a7e53b.svg": "d7ebf8ef380be3872fdad9ebf853201fe536c012",
+    "/fa-brands-400.87a84e7a754d3ea3.woff2": "380bea4e9eb484d835d89cc608f2af7c3179e8a4",
+    "/fa-brands-400.8f295425e00606a5.ttf": "42350ed503d66ae23a9c68d38966f25bc3007319",
+    "/fa-regular-400.561c7c94e0bcd512.woff2": "56be4c28de7c67747b0fe3dd606be8b319f6d4f4",
+    "/fa-regular-400.e9092185220128b0.ttf": "9262ea1d0711b658bb75d5cbe9345e080c7dea90",
+    "/fa-solid-900.3cfeed05c6462b50.woff2": "a7fca574d24e9ffa5ee0e0589ffe17277ae4ec27",
+    "/fa-solid-900.ab3a31afd1611597.ttf": "d2caaf5ce75d0da13ace325e24f7aa7079ef1891",
+    "/favicon.ico": "432db0ddbf9ce0461c679f7b2c29774ece2083a4",
+    "/index.html": "6b36b8fa913a2d626da0d0fe709f5a8c101cd67c",
+    "/main.f20bbeafdc906eb8.js": "b0ab8abdce80d3a649120c26829cacd2eff15d96",
+    "/manifest.webmanifest": "270c5371884aa5300c1d5f9751822f8db1215844",
+    "/polyfills.466485aa1a319029.js": "e3117a1a021929cf42b0343a4b48e82e325428ad",
+    "/runtime.5628113bba570ac6.js": "79c7e2188d556740f2d9f7409e3e1b6f713dff4d",
+    "/styles.cbbebdc506354f1a.css": "e188555f20b83a3cc798b4a6334573250ac4dd93"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
